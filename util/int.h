@@ -19,5 +19,6 @@ typedef long off_t;
 */
 
 #include <stdint.h>
+#include <stddef.h>
 
 #endif
