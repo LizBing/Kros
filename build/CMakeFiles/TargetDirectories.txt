@@ -1,0 +1,3 @@
+/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles/kros.dir
+/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles/edit_cache.dir
+/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles/rebuild_cache.dir
