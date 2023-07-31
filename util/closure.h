@@ -5,9 +5,9 @@
 
 typedef struct {
     bool(*func)(void* this, void* arg);
-    char arg[];
+    void* arg;
 } Closure;
 
-static inline bool Closure_do(Closure* cl, void* this) { return cl->func(this, cl->arg); }
+static inline bool Closure_do(Closure cl, void* this) { return cl.func(this, cl.arg); }
 
 #endif
