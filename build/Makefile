@@ -117,41 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named kros
+# Target rules for targets named Kros
 
 # Build rule for target.
-kros: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 kros
-.PHONY : kros
+Kros: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Kros
+.PHONY : Kros
 
 # fast build rule for target.
-kros/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/build
-.PHONY : kros/fast
+Kros/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/build
+.PHONY : Kros/fast
 
-util/foo.o: util/foo.c.o
-.PHONY : util/foo.o
+compile_commands_trigger.o: compile_commands_trigger.cpp.o
+.PHONY : compile_commands_trigger.o
 
 # target to build an object file
-util/foo.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/util/foo.c.o
-.PHONY : util/foo.c.o
+compile_commands_trigger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o
+.PHONY : compile_commands_trigger.cpp.o
 
-util/foo.i: util/foo.c.i
-.PHONY : util/foo.i
+compile_commands_trigger.i: compile_commands_trigger.cpp.i
+.PHONY : compile_commands_trigger.i
 
 # target to preprocess a source file
-util/foo.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/util/foo.c.i
-.PHONY : util/foo.c.i
+compile_commands_trigger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/compile_commands_trigger.cpp.i
+.PHONY : compile_commands_trigger.cpp.i
 
-util/foo.s: util/foo.c.s
-.PHONY : util/foo.s
+compile_commands_trigger.s: compile_commands_trigger.cpp.s
+.PHONY : compile_commands_trigger.s
 
 # target to generate assembly for a file
-util/foo.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/util/foo.c.s
-.PHONY : util/foo.c.s
+compile_commands_trigger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/compile_commands_trigger.cpp.s
+.PHONY : compile_commands_trigger.cpp.s
 
 # Help Target
 help:
@@ -161,10 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... kros"
-	@echo "... util/foo.o"
-	@echo "... util/foo.i"
-	@echo "... util/foo.s"
+	@echo "... Kros"
+	@echo "... compile_commands_trigger.o"
+	@echo "... compile_commands_trigger.i"
+	@echo "... compile_commands_trigger.s"
 .PHONY : help
 
 

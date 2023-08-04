@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /Users/leizaakjy/Projects/jvm/kros/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/kros.dir/all
+all: CMakeFiles/Kros.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/kros.dir/clean
+clean: CMakeFiles/Kros.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/kros.dir
+# Target rules for target CMakeFiles/Kros.dir
 
 # All Build rule for target.
-CMakeFiles/kros.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles --progress-num=1,2 "Built target kros"
-.PHONY : CMakeFiles/kros.dir/all
+CMakeFiles/Kros.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles --progress-num=1,2 "Built target Kros"
+.PHONY : CMakeFiles/Kros.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/kros.dir/rule: cmake_check_build_system
+CMakeFiles/Kros.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/kros.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Kros.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles 0
-.PHONY : CMakeFiles/kros.dir/rule
+.PHONY : CMakeFiles/Kros.dir/rule
 
 # Convenience name for target.
-kros: CMakeFiles/kros.dir/rule
-.PHONY : kros
+Kros: CMakeFiles/Kros.dir/rule
+.PHONY : Kros
 
 # clean rule for target.
-CMakeFiles/kros.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/kros.dir/build.make CMakeFiles/kros.dir/clean
-.PHONY : CMakeFiles/kros.dir/clean
+CMakeFiles/Kros.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kros.dir/build.make CMakeFiles/Kros.dir/clean
+.PHONY : CMakeFiles/Kros.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
