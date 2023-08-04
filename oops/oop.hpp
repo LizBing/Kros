@@ -7,10 +7,15 @@ class Class;
 
 typedef class OopDesc* oop;
 class OopDesc {
+private:
     MarkWord markWord;
+
 public:
     Class* klass;
 
+    ;
+
+private:
 };
 
 #endif
