@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.26.4/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/leizaakjy/Projects/jvm/kros
+CMAKE_SOURCE_DIR = /Users/leizaakjy/Projects/jvm/Kros
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/leizaakjy/Projects/jvm/kros/build
+CMAKE_BINARY_DIR = /Users/leizaakjy/Projects/jvm/Kros/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Kros.dir/depend.make
@@ -70,18 +70,18 @@ include CMakeFiles/Kros.dir/progress.make
 include CMakeFiles/Kros.dir/flags.make
 
 CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o: CMakeFiles/Kros.dir/flags.make
-CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o: /Users/leizaakjy/Projects/jvm/kros/compile_commands_trigger.cpp
+CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o: /Users/leizaakjy/Projects/jvm/Kros/compile_commands_trigger.cpp
 CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o: CMakeFiles/Kros.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -MF CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o.d -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -c /Users/leizaakjy/Projects/jvm/kros/compile_commands_trigger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/leizaakjy/Projects/jvm/Kros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -MF CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o.d -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -c /Users/leizaakjy/Projects/jvm/Kros/compile_commands_trigger.cpp
 
 CMakeFiles/Kros.dir/compile_commands_trigger.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Kros.dir/compile_commands_trigger.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leizaakjy/Projects/jvm/kros/compile_commands_trigger.cpp > CMakeFiles/Kros.dir/compile_commands_trigger.cpp.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/leizaakjy/Projects/jvm/Kros/compile_commands_trigger.cpp > CMakeFiles/Kros.dir/compile_commands_trigger.cpp.i
 
 CMakeFiles/Kros.dir/compile_commands_trigger.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Kros.dir/compile_commands_trigger.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leizaakjy/Projects/jvm/kros/compile_commands_trigger.cpp -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/leizaakjy/Projects/jvm/Kros/compile_commands_trigger.cpp -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.s
 
 # Object files for target Kros
 Kros_OBJECTS = \
@@ -93,7 +93,7 @@ Kros_EXTERNAL_OBJECTS =
 libKros.a: CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o
 libKros.a: CMakeFiles/Kros.dir/build.make
 libKros.a: CMakeFiles/Kros.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libKros.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/leizaakjy/Projects/jvm/Kros/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libKros.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/Kros.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Kros.dir/link.txt --verbose=$(VERBOSE)
 
@@ -106,6 +106,6 @@ CMakeFiles/Kros.dir/clean:
 .PHONY : CMakeFiles/Kros.dir/clean
 
 CMakeFiles/Kros.dir/depend:
-	cd /Users/leizaakjy/Projects/jvm/kros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leizaakjy/Projects/jvm/kros /Users/leizaakjy/Projects/jvm/kros /Users/leizaakjy/Projects/jvm/kros/build /Users/leizaakjy/Projects/jvm/kros/build /Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles/Kros.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/leizaakjy/Projects/jvm/Kros/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/leizaakjy/Projects/jvm/Kros /Users/leizaakjy/Projects/jvm/Kros /Users/leizaakjy/Projects/jvm/Kros/build /Users/leizaakjy/Projects/jvm/Kros/build /Users/leizaakjy/Projects/jvm/Kros/build/CMakeFiles/Kros.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/Kros.dir/depend
 

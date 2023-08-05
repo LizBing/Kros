@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/leizaakjy/Projects/jvm/kros/compile_commands_trigger.cpp" "CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o" "gcc" "CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o.d"
+  "/Users/leizaakjy/Projects/jvm/Kros/compile_commands_trigger.cpp" "CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o" "gcc" "CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

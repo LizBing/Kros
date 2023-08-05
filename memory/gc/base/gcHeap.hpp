@@ -6,6 +6,9 @@
 
 class GCHeap {
 private:
+    uint32_t _totalCollections, _totalFullCollections;
+
+private:
     virtual void* alloc_tlab(size_t) = 0;
     virtual void* mem_alloc(size_t) = 0;
 
@@ -30,6 +33,11 @@ public:
     virtual void doFullGC(const char* cause) = 0;
 
     virtual void object_iterate(ObjectClosure*) = 0;
+
+    uint32_t totalCollections() { return _totalCollections; }
+    uint32_t totalFullCollections() { return _totalFullCollections; }
+    void incrTotalCollections();
+    void incrTotalFullCollections();
 };
 
 #endif

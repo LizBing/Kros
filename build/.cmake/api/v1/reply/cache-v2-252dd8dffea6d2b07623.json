@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/leizaakjy/Projects/jvm/kros/build"
+			"value" : "/Users/leizaakjy/Projects/jvm/Kros/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -495,7 +495,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/leizaakjy/Projects/jvm/kros/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/leizaakjy/Projects/jvm/Kros/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -1131,7 +1131,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/leizaakjy/Projects/jvm/kros/build"
+			"value" : "/Users/leizaakjy/Projects/jvm/Kros/build"
 		},
 		{
 			"name" : "Kros_IS_TOP_LEVEL",
@@ -1155,7 +1155,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/leizaakjy/Projects/jvm/kros"
+			"value" : "/Users/leizaakjy/Projects/jvm/Kros"
 		}
 	],
 	"kind" : "cache",
