@@ -24,7 +24,7 @@ public:
         do {
             oldTop = Atomic::load(&top);
             n->next = oldTop;
-        } while(Atomic::cmpxchg(&top, oldTop, n) != oldTop);
+        } while(Atomic::cmpxchg_weak(&top, oldTop, n) != oldTop);
     }
 
     LockFreeStackNode* pop() {
@@ -35,7 +35,7 @@ public:
                 return nullptr;
 
             newTop = n->next;
-        } while(Atomic::cmpxchg(&top, n, newTop) != n);
+        } while(Atomic::cmpxchg_weak(&top, n, newTop) != n);
 
         return n;
     }

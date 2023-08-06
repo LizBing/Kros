@@ -1,7 +1,6 @@
 #ifndef UTIL_GLOBALS_
 #define UTIL_GLOBALS_
 
-#include "allStatic.hpp"
 #include "int.h"
 
 #ifdef _LP64
