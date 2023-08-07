@@ -40,8 +40,14 @@ struct os : AllStatic {
     static int open_shm(const char*, int mode);
     static void close_shm(const char*);
 
-    static void* memmap(void*, size_t, bool executable, int fd, off_t);
-    static void memunmap(void*, size_t);
+    static void* mmap(void*, size_t, bool executable, int fd, off_t);
+    static void munmap(void*, size_t);
+
+    static void* malloc(size_t);
+    static void free(void*);
+    static void* realloc(void*, size_t);
+
+    static void* memcpy(void*, void*, size_t);
 };
 
 

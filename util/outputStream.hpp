@@ -9,8 +9,7 @@ class OutputStream {
 public:
     OutputStream(const char* path) {
         fp = fopen(path, "w");
-        if(ferror(fp))
-            panic("faild to open the file '%s'.", path);
+        assert(!ferror(fp), "faild to open the file '%s'.", path);
     }
 
     ~OutputStream() {

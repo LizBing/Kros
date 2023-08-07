@@ -2,7 +2,7 @@
 #define UTIL_ARRAY_
 
 #include "memory/allocation.hpp"
-#include "util/debug.h"
+#include "runtime/debug.h"
 #include "util/align.h"
 
 template<class T>

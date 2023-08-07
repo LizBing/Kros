@@ -15,6 +15,10 @@ static const int logBitsPerWord = logBitsPerByte + logBytesPerWord;
 static const int bitsPerByte = 1 << logBitsPerByte;
 static const int bitsPerWord = 1 << logBitsPerWord;
 
+static const size_t K = 1024;
+static const size_t M = K * 1024;
+static const size_t G = M * 1024;
+
 template<class T>
 constexpr T min2(T x, T y) { return x > y ? y : x; }
 

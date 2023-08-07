@@ -3,7 +3,7 @@
 
 #include "array"
 #include "memory/allocation.hpp"
-#include "util/debug.h"
+#include "runtime/debug.h"
 
 template<class T>
 class StackBase {
@@ -16,7 +16,7 @@ public:
 
     bool push(T n) {
         auto index = top++;
-        if(top > size)
+        if(top >= size)
             return false;
 
         segment[index] = n;
@@ -50,6 +50,18 @@ public:
     Stack(size_t segSize = defaultSegSize)
     : segmentSize(segSize), cur(NULL), cache(NULL) {} 
 
+    // we won't call the dtor of each instance of T
+    ~Stack() {
+        delete cur;
+
+        auto iter = cache;
+        while(iter) {
+            auto tmp = iter;
+            delete iter;
+            iter = tmp->next;
+        }
+    }
+
     void push(T n) {
         if(cur && cur->push(n))
             return;
@@ -80,8 +92,7 @@ private:
         cur = popCache();
         if(!cur) {
             cur = operator new(sizeof(StackBase<T>) + sizeof(T) * segmentSize);
-            if(!cur)
-                panic("out of memory(c heap)");
+            assert(cur, "out of memory(c heap)");
         }
 
         cur->next = tmp;
