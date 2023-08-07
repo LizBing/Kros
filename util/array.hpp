@@ -15,8 +15,7 @@ public:
     Array(size_t len = 128) 
     : _capacity(computeCapacity(len)) {
         data = new T[len];
-        if(!data)
-            panic("out of memory(c heap).");
+        assert(data, "out of memory(c heap).");
     }
 
     size_t capacity() { return _capacity; }
@@ -25,9 +24,10 @@ public:
         _capacity = computeCapacity(len);
 
         data = reallocate(data, capacity());
-        if(!data)
-            panic("out of memory(c heap).");
+        assert(data, "out of memory(c heap).");
     }
+
+    void resize() { resize(_capacity * 2); }
 
     T* at(long index) { return data + index; }
 
