@@ -7,9 +7,9 @@
 
 template<class T>
 class Array : CHeapObj {
-    static const size_t capacityAlignment = 128;
+    static const size_t alignment = 128;
 
-    static size_t computeCapacity(size_t c) { return align_up(c, capacityAlignment); }
+    static size_t computeCapacity(size_t c) { return align_up(c, alignment); }
 
 public:
     Array(size_t len = 128) 

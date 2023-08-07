@@ -37,12 +37,14 @@ public:
     : head(NULL), _size(0) {}
 
     void push(Node* n) {
+        ++_size;
         n->next = head;
         head = n;
     }
 
     Node* pop() {
         if(head) {
+            --_size;
             auto tmp = head;
             head = head->next;
             return tmp;
@@ -50,6 +52,8 @@ public:
 
         return NULL;
     }
+
+    size_t size() { return _size; }
 
     bool iterate(HashTableClosure<Key, Value>* cl) {
         for(auto iter = head; iter; iter = iter->next)
@@ -72,9 +76,9 @@ template<
 class HashTable : CHeapObj {
     using Node = HashTableNode<Key, Value>;
 public:
-    HashTable(size_t nBuckets = 128, float _loadFactor = 0.75)
-    : old(NULL), loadFactor(_loadFactor) {
-        cur = new Bucket<Key, Value>[nBuckets];
+    HashTable(size_t nBuckets = 128, float _rehashThreshold = 0.75)
+    : old(NULL), rehashThreshold(_rehashThreshold) {
+        cur = new Array<Bucket<Key, Value>>(nBuckets);
         assert(cur, "out of memory(c heap)");
     }
 
@@ -84,14 +88,22 @@ public:
     bool exist(Key);
     bool exist(int);
 
+    size_t size() { return _size; }
+    bool empty() { return !size(); }
+
     void iterate(HashTableClosure<Key, Value>* cl);
 
 private:
     void put(int, Node*);
 
+    float loadFactor() { return size() / cur->capacity(); }
+
+    void rehash();
+
 private:
-    float loadFactor;
-    Bucket<Key, Value>* old, *cur;
+    float rehashThreshold;
+    Array<Bucket<Key, Value>>* old, *cur;
+    size_t _size;
 };
 
 #endif
