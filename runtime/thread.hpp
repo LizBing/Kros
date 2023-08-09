@@ -3,6 +3,6 @@
 
 class Thread {};
 
-class JavaThread {};
+class LangThread {};
 
 #endif

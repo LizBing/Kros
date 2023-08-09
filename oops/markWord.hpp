@@ -5,7 +5,7 @@
 #include "util/int.h"
 #include "util/macros.h"
 
-class JavaThread;
+class LangThread;
 class ObjectMonitor;
 class BasicLock;
 
@@ -53,7 +53,7 @@ public:
 
     static MarkWord encode(ObjectMonitor* m) { return (intptr_t)m | monitor_v; }
 
-    static MarkWord encode(JavaThread* jt, int a, int epoch) {
+    static MarkWord encode(LangThread* jt, int a, int epoch) {
         return MarkWord((intptr_t)jt << thrd_shift | epoch << epoch_shift | a << age_shift);
     }
 
@@ -61,8 +61,8 @@ public:
 
     bool locked() { return !areMaskBitsSet(value(), unlocked_v); }
     bool biasedLocked() { return areMaskBitsSet(value(), biasedLockPattern_v); }
-    JavaThread* biasedLocker() {
-        return (JavaThread*)(value() >> thrd_shift);
+    LangThread* biasedLocker() {
+        return (LangThread*)(value() >> thrd_shift);
     }
 
     int age() { return maskBits(value(), age_maskInPlace) >> age_shift; }
@@ -81,6 +81,7 @@ public:
     MarkWord setMarked() { return MarkWord(value() & ~lock_maskInPlace | marked_v); }
     MarkWord setUnmarked() { return MarkWord(value() & ~lock_maskInPlace | unlocked_v); }
 
+    friend class OopDesc;
 private:
     uintptr_t v;
 };

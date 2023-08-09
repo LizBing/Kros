@@ -2,7 +2,7 @@
 #include "memory/allocation.hpp"
 #include "runtime/threadCritical.hpp"
 
-class ChunkPool : CHeapObj {
+class ChunkPool : public CHeapObj {
 public:
     static ChunkPool 
         *tinyPool,
@@ -15,6 +15,18 @@ public:
         initPool = new ChunkPool(Chunk::initSize);
         mediumPool = new ChunkPool(Chunk::mediumSize);
         normalPool = new ChunkPool(Chunk::size);
+    }
+
+    static ChunkPool* select(size_t s) {
+        switch (s) {
+        case Chunk::tinySize: return ChunkPool::tinyPool; 
+        case Chunk::initSize: return ChunkPool::initPool; 
+        case Chunk::mediumSize: return ChunkPool::mediumPool; 
+        case Chunk::size: return ChunkPool::normalPool; 
+
+        default:
+            return NULL;
+        }
     }
 
 public:
@@ -48,19 +60,13 @@ private:
     Chunk* top;
 };
 
-Arena::Arena(size_t initSize) { grow(initSize); }
-
 void* Arena::grow(size_t s) {
     Chunk* c;
-
-    switch (s) {
-    case Chunk::tinySize: c = ChunkPool::tinyPool->allocate(); break;
-    case Chunk::initSize: c = ChunkPool::initPool->allocate(); break;
-    case Chunk::mediumSize: c = ChunkPool::mediumPool->allocate(); break;
-    case Chunk::size: c = ChunkPool::normalPool->allocate(); break;
-
-    default:
-        void* p = operator new(sizeof(Chunk) + s);
+    auto cp = ChunkPool::select(s);
+    if(cp)
+        c = cp->allocate();
+    else {
+        auto p = operator new(sizeof(Chunk) + s);
         assert(p, "out of memory(c heap)");
 
         c = new(p) Chunk(s);
@@ -77,4 +83,14 @@ void* Arena::grow(size_t s) {
         first = cur = c;
     }
     return c->space;
+}
+
+void Chunk::operator delete(void* p) {
+    auto c = (Chunk*)p;
+    auto cp = ChunkPool::select(c->len);
+
+    if(cp)
+        cp->release(c);
+    else
+        ChunkPool::operator delete(c);
 }

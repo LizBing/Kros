@@ -1,21 +1,27 @@
 #ifndef OOPS_OOP_
 #define OOPS_OOP_
 
+#include "memory/iterator.hpp"
 #include "oops/markWord.hpp"
 
-class Class;
-
+typedef class TypeDesc* Type;
 typedef class OopDesc* oop;
+
 class OopDesc {
 private:
-    MarkWord markWord;
+    volatile MarkWord _markWord;
+    Type type;
+    char _base[0];
 
 public:
-    Class* klass;
+    template<class T>
+    T fieldAddr(off_t off) { return *(T*)(actualBase() + off); }
 
+    void oop_iterate(OopClosure*);
+    char* actualBase(); 
+
+    MarkWord markWord() { return _markWord.v; }
     ;
-
-private:
 };
 
 #endif

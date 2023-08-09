@@ -1,10 +1,16 @@
 #ifndef MEMORY_VIRTUALSPACE_
 #define MEMORY_VIRTUALSPACE_
 
+#include "memory/physicalSpace.hpp"
 #include "util/int.h"
 #include "util/align.h"
 
 class VirtualSpace {
+public:
+    static void* map(void*, Partition, bool executable = false);
+    static void* map(Partition, bool executable = false);
+    static void unmap(void*, size_t);
+
 public:
     VirtualSpace(void* start, size_t initSize, size_t alignment, size_t maxCapacity)
     : _start((char*)start), _alignment(alignment), _maxCapacity(maxCapacity) {
@@ -17,13 +23,14 @@ public:
     size_t maxCapacity() { return _maxCapacity; }
     bool contains(void* p) { return p >= start() && p < end(); }
 
-    bool expand(size_t s) {
+    void* expand(size_t s) {
         auto tmp = _capacity + s;
         if(tmp > _maxCapacity)
-            return false;
+            return NULL;
 
+        auto ret_val = _start + _capacity;
         _capacity = tmp;
-        return true;
+        return ret_val;
     }
 
 private:
