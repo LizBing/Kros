@@ -7,7 +7,7 @@
 
 class VirtualSpace {
 public:
-    static void* map(void*, Partition, bool executable = false);
+    static void* map(void*, Partition);
     static void* map(Partition, bool executable = false);
     static void unmap(void*, size_t);
 
