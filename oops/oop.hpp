@@ -3,7 +3,7 @@
 
 #include "memory/iterator.hpp"
 #include "runtime/globals.hpp"
-#include <sys/types.h>
+#include "runtime/atomic.hpp"
 
 using Type = class TypeDesc*;
 using NarrowType = uint32_t;
@@ -11,46 +11,25 @@ using oop = class OopDesc*;
 using NarrowOop = uint32_t;
 
 class OopDesc {
-private:
-    union {
-        struct {
-            Type _type;
-            volatile uintptr_t _info;
-        };
+public:
+    uintptr_t info;
 
-        struct {
-            NarrowType narrowType;
-            volatile uint32_t narrowInfo;
-        };
-    };
+private:
+    Type _type;
+    char base[0];
 
 public:
+    size_t length() { return *(size_t*)base; }
+    char* actualBase(); 
+
     template<class T>
     T fieldAddr(off_t off) { return *(T*)(actualBase() + off); }
 
     void oop_iterate(OopClosure*);
 
-    char* actualBase() {
-        if(enableCompressedPointer)
-            return (char*)(&narrowInfo + 1);
-        return (char*)(&_info + 1);
-    }
-
-    uintptr_t info() volatile {
-        if(enableCompressedPointer)
-            return narrowInfo;
-        return _info;
-    }
-
-    void setInfo(uintptr_t n) volatile {
-        if(enableCompressedPointer)
-            narrowInfo = n;
-        else
-            _info = n;
-    }
-
-    void setInfo_par(uintptr_t n) volatile;
-    uintptr_t casInfo(uintptr_t exp, uintptr_t des) volatile; 
+    uintptr_t getInfo_par() { return Atomic::load(&info); }
+    void setInfo_par(uintptr_t n) { Atomic::store(&info, n); }
+    uintptr_t casInfo(uintptr_t exp, uintptr_t des) { return Atomic::cmpxchg_strong(&info, exp, des); }
 
     template<class T = TypeDesc>
     T* type(); 
