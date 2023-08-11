@@ -2,7 +2,7 @@
 #define RUNTIME_OS_
 
 #include "memory/allStatic.hpp"
-#include "util/int.h"
+#include "utils/int.h"
 
 struct os : AllStatic {
     static long getpid();

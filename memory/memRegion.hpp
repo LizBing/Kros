@@ -1,7 +1,7 @@
 #ifndef MEMORY_MEMREGION_
 #define MEMORY_MEMREGION_
 
-#include "util/int.h"
+#include "utils/int.h"
 #include "allocation.hpp"
 
 class MemRegion : CHeapObj {

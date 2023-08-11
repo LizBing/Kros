@@ -1,9 +1,9 @@
 #ifndef OOPS_MARKWORD_
 #define OOPS_MARKWORD_
 
-#include "util/globals.h"
-#include "util/int.h"
-#include "util/macros.h"
+#include "utils/globals.h"
+#include "utils/int.h"
+#include "utils/macros.h"
 
 class LangThread;
 class ObjectMonitor;

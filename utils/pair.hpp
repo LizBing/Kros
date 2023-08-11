@@ -1,5 +1,5 @@
-#ifndef UTIL_PAIR_
-#define UTIL_PAIR_
+#ifndef UTILS_PAIR_
+#define UTILS_PAIR_
 
 template<class T, class U>
 struct Pair {

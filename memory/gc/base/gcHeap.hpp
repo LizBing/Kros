@@ -1,7 +1,7 @@
 #ifndef MEMORY_GC_BASE_GCHEAP_
 #define MEMORY_GC_BASE_GCHEAP_
 
-#include "util/int.h"
+#include "utils/int.h"
 #include "memory/iterator.hpp"
 
 class GCHeap {

@@ -1,7 +1,7 @@
 #ifndef RUNTIME_GLOBALS_
 #define RUNTIME_GLOBALS_
 
-#include "util/int.h"
+#include "utils/int.h"
 
 extern bool enableCompressedPointer;
 

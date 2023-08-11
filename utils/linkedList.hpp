@@ -1,5 +1,5 @@
-#ifndef UTIL_LINKEDLIST_
-#define UTIL_LINKEDLIST_
+#ifndef UTILS_LINKEDLIST_
+#define UTILS_LINKEDLIST_
 
 #include "memory/iterator.hpp"
 

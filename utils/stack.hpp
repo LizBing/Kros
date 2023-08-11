@@ -1,5 +1,5 @@
-#ifndef UTIL_STACK_
-#define UTIL_STACK_
+#ifndef UTILS_STACK_
+#define UTILS_STACK_
 
 #include "array"
 #include "memory/allocation.hpp"

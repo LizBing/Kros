@@ -3,8 +3,8 @@
 
 #include "allocation.hpp"
 #include "runtime/debug.h"
-#include "util/int.h"
-#include "util/linkedList.hpp"
+#include "utils/int.h"
+#include "utils/linkedList.hpp"
 
 class Partition;
 

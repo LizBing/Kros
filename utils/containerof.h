@@ -1,5 +1,5 @@
-#ifndef UTIL_CONTAINEROF_
-#define UTIL_CONTAINEROF_
+#ifndef UTILS_CONTAINEROF_
+#define UTILS_CONTAINEROF_
 
 #include "int.hpp"
 

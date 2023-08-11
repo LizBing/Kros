@@ -1,5 +1,5 @@
-#ifndef UTIL_LOCKFREESTACK_
-#define UTIL_LOCKFREESTACK_
+#ifndef UTILS_LOCKFREESTACK_
+#define UTILS_LOCKFREESTACK_
 
 #include "runtime/atomic.hpp"
 #include "memory/iterator.hpp"

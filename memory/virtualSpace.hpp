@@ -2,8 +2,8 @@
 #define MEMORY_VIRTUALSPACE_
 
 #include "memory/physicalSpace.hpp"
-#include "util/int.h"
-#include "util/align.h"
+#include "utils/int.h"
+#include "utils/align.h"
 
 class VirtualSpace {
 public:

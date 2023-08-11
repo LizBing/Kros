@@ -1,5 +1,5 @@
-#ifndef UTIL_MACROS_
-#define UTIL_MACROS_
+#ifndef UTILS_MACROS_
+#define UTILS_MACROS_
 
 #ifdef _LP64
 #define LP64_ONLY(x) x

@@ -1,26 +1,24 @@
-#ifndef UTIL_HASHTABLE_
-#define UTIL_HASHTABLE_
+#ifndef UTILS_HASHTABLE_
+#define UTILS_HASHTABLE_
 
 #include "array.hpp"
 #include "memory/allocation.hpp"
 #include "memory/iterator.hpp"
-#include "util/linkedList.hpp"
+#include "utils/linkedList.hpp"
 
 template<class Key, class Value>
 class HashTableNode {
     template<class, class>
     friend class Bucket;
 public:
-    HashTableNode(Key key, Value _value, int hashCode) 
-    : _key(key), value(_value), _hashCode(hashCode) {}
+    HashTableNode(Key _key, Value _value, int _hashCode) 
+    : key(_key), value(_value), hashCode(_hashCode) {}
 
-    Key key() { return _key; }
+    const Key key;
     Value value;
-    int hashCode() { return _hashCode; }
+    const int hashCode;
 
 private:
-    Key _key;
-    int _hashCode;
     HashTableNode<Key, Value>* next;
 };
 

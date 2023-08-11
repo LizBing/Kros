@@ -1,5 +1,5 @@
-#ifndef UTIL_AVERAGE_
-#define UTIL_AVERAGE_
+#ifndef UTILS_AVERAGE_
+#define UTILS_AVERAGE_
 
 #include "globals.h"
 

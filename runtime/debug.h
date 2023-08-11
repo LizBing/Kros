@@ -1,5 +1,5 @@
-#ifndef UTIL_DEBUG_
-#define UTIL_DEBUG_
+#ifndef UTILS_DEBUG_
+#define UTILS_DEBUG_
 
 #include <stdio.h>
 #include "exit.h"

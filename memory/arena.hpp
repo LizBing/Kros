@@ -2,10 +2,10 @@
 #define MEMORY_ARENA_
 
 #include "memory/allocation.hpp"
-#include "util/align.h"
-#include "util/globals.h"
-#include "util/int.h"
-#include "util/macros.h"
+#include "utils/align.h"
+#include "utils/globals.h"
+#include "utils/int.h"
+#include "utils/macros.h"
 #include "runtime/debug.h"
 
 class Chunk {

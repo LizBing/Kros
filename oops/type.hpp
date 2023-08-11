@@ -2,8 +2,8 @@
 #define OOPS_TYPE_
 
 #include "memory/iterator.hpp"
-#include "util/int.h"
-#include "util/macros.h"
+#include "utils/int.h"
+#include "utils/macros.h"
 
 typedef struct TypeDesc {
     virtual bool protoType() const = 0;

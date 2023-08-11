@@ -1,5 +1,5 @@
-#ifndef UTIL_INT_
-#define UTIL_INT_
+#ifndef UTILS_INT_
+#define UTILS_INT_
 
 #include <cstdint>
 #include <cstddef>

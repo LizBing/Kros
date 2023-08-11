@@ -1,9 +1,9 @@
-#ifndef UTIL_ARRAY_
-#define UTIL_ARRAY_
+#ifndef UTILS_ARRAY_
+#define UTILS_ARRAY_
 
 #include "memory/allocation.hpp"
 #include "runtime/debug.h"
-#include "util/align.h"
+#include "utils/align.h"
 
 template<class T>
 class Array : CHeapObj {
