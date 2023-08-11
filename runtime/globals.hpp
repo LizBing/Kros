@@ -2,8 +2,8 @@
 #define RUNTIME_GLOBALS_
 
 #include "utils/int.h"
+#include "vmFlag.hpp"
 
-extern bool enableCompressedPointer;
-
+DECLARE_VMFLAG(bool, enableCompressedPointer, true, "");
 
 #endif

@@ -5,6 +5,10 @@
 #include <cstddef>
 #include <sys/types.h>
 
-// using off_t = long;
+using intx = intptr_t;
+using uintx = uintptr_t;
+
+using vmlong = int64_t;
+using vmulong = uint64_t;
 
 #endif
