@@ -68,8 +68,6 @@ extern "C" type name
 
 #endif
 
-#define CREATE_VMFLAG(type, name, defaultValue, doc) \
-    VMFlag(&name, VMFlag::Type::TYPE_##type, #name, doc)
 
 
 #endif

@@ -16,7 +16,7 @@ enum VMFlagEnum {
     VMFLAG_NUM
 };
 
-class VMFlagTable : AllStatic {
+class VMFlagTable {
 private:
     static const int BUCKETS_NUM = 277;
 
