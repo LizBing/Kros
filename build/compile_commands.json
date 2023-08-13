@@ -1,7 +1,7 @@
 [
 {
   "directory": "/Users/leizaakjy/Projects/vm/Kros/build",
-  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/leizaakjy/Projects/vm/Kros -g -std=c++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -c /Users/leizaakjy/Projects/vm/Kros/compile_commands_trigger.cpp",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/leizaakjy/Projects/vm/Kros -g -std=c++14 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -mmacosx-version-min=12.6 -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -c /Users/leizaakjy/Projects/vm/Kros/compile_commands_trigger.cpp",
   "file": "/Users/leizaakjy/Projects/vm/Kros/compile_commands_trigger.cpp",
   "output": "CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o"
 }

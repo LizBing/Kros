@@ -6,9 +6,7 @@
 #include "runtime/atomic.hpp"
 
 using Type = class TypeDesc*;
-using NarrowType = uint32_t;
 using oop = class OopDesc*;
-using NarrowOop = uint32_t;
 
 class OopDesc {
 public:
@@ -32,7 +30,7 @@ public:
     uintptr_t casInfo(uintptr_t exp, uintptr_t des) { return Atomic::cmpxchg_strong(&info, exp, des); }
 
     template<class T = TypeDesc>
-    T* type(); 
+    T* type() { return static_cast<T*>(_type); }
 };
 
 #endif

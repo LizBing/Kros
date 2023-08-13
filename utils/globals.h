@@ -3,6 +3,8 @@
 
 #include "int.h"
 
+using str = const char*;
+
 static const int logBytesPerShort = 1;
 static const int logBytesPerInt = 2;
 static const int logBytesPerVMLong = 3;

@@ -3,6 +3,6 @@
 
 class Thread {};
 
-class LangThread {};
+class LangThread : public Thread {};
 
 #endif
