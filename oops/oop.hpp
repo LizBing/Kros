@@ -2,10 +2,10 @@
 #define OOPS_OOP_
 
 #include "memory/iterator.hpp"
-#include "runtime/globals.hpp"
+#include "runtime/globals.h"
 #include "runtime/atomic.hpp"
 
-using Type = class TypeDesc*;
+class TypeDesc;
 using oop = class OopDesc*;
 
 class OopDesc {
@@ -13,7 +13,7 @@ public:
     uintptr_t info;
 
 private:
-    Type _type;
+    TypeDesc* _type;
     char base[0];
 
 public:

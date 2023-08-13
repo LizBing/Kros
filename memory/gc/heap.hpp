@@ -1,5 +1,5 @@
-#ifndef MEMORY_GC_BASE_GCHEAP_
-#define MEMORY_GC_BASE_GCHEAP_
+#ifndef MEMORY_GC_HEAP_
+#define MEMORY_GC_HEAP_
 
 #include "utils/int.h"
 #include "memory/iterator.hpp"

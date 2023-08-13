@@ -17,7 +17,7 @@
 
 #define DECLARE_VMFLAGTYPE(t) TYPE_##t,
 #define VMFLAGTYPE_ACCESSOR(t) \
-    bool is_##t() const { return _type == Type::TYPE_##t; } \
+    bool is_##t() const { return type() == Type::TYPE_##t; } \
     t get_##t() const { return *(t*)_addr; } 
 
 class VMFlagTable;
@@ -34,6 +34,8 @@ public:
     : _addr(addr), _type(type), _name(name), _doc(doc) {}
 
     const char* name() const { return _name; }
+    Type type() const { return _type; }
+    const char* doc() const { return _doc; }
 
     template<class T>
     T get() const { return *(T*)_addr; }
@@ -54,20 +56,10 @@ private:
     const char* _doc;
 };
 
-#define RANGE(...)  // no range checking
-
-#ifdef PRODUCT
-
-#define DECLARE_VMFLAG(type, name, ...) \
-type name 
-
-#else
-
 #define DECLARE_VMFLAG(type, name, ...) \
 extern "C" type name 
 
-#endif
-
-
+#define DEFINE_VMFLAG(type, name, defaultValue, ...) \
+type name = defaultValue;
 
 #endif

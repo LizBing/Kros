@@ -1,13 +1,13 @@
-#ifndef OOPS_TYPE_
-#define OOPS_TYPE_
+#ifndef OOPS_TYPEDESC_
+#define OOPS_TYPEDESC_
 
 #include "memory/iterator.hpp"
-#include "runtime/globals.hpp"
+#include "runtime/globals.h"
 #include "utils/globals.h"
 #include "utils/int.h"
 #include "utils/macros.h"
 
-typedef struct TypeDesc {
+struct TypeDesc {
     virtual bool protoType() const = 0;
     virtual bool arrayType() const = 0;
 
@@ -24,6 +24,6 @@ typedef struct TypeDesc {
     }
     
     virtual void oopGraph_iterate(OopGraphClosure*) = 0;
-}* Type;
+};
 
 #endif
