@@ -1,3 +1,0 @@
-/home/shaodw/projects/Kros/build/CMakeFiles/Kros.dir
-/home/shaodw/projects/Kros/build/CMakeFiles/edit_cache.dir
-/home/shaodw/projects/Kros/build/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/shaodw/projects/Kros/build",
-  "command": "/usr/bin/c++  -I/home/shaodw/projects/Kros -std=c++14 -o CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o -c /home/shaodw/projects/Kros/compile_commands_trigger.cpp",
-  "file": "/home/shaodw/projects/Kros/compile_commands_trigger.cpp"
-}
-]

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libKros.a CMakeFiles/Kros.dir/compile_commands_trigger.cpp.o
-/usr/bin/ranlib libKros.a
