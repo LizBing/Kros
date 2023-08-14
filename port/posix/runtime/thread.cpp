@@ -29,7 +29,7 @@ Thread::Thread(Runnable* r) {
     assert(!res, "failed to create a new thread.");
 }
 
-Thread::~Thread() { delete nativeHandle; }
+Thread::~Thread() { operator delete(nativeHandle); }
 
 void Thread::join() { pthread_join(*(pthread_t*)nativeHandle, NULL); }
 void Thread::detach() { pthread_detach(*(pthread_t*)nativeHandle); }

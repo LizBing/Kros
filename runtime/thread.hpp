@@ -3,11 +3,12 @@
 
 #include "memory/allStatic.hpp"
 #include "memory/allocation.hpp"
+
 struct Runnable {
     virtual void run() = 0;
 };
 
-class Thread : CHeapObj {
+class Thread : protected CHeapObj {
 public:
     template<class T = Thread>
     static T* current();
