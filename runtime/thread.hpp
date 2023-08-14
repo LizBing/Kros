@@ -1,8 +1,29 @@
 #ifndef RUNTIME_THREAD_
 #define RUNTIME_THREAD_
 
-class Thread {};
+#include "memory/allStatic.hpp"
+#include "memory/allocation.hpp"
+struct Runnable {
+    virtual void run() = 0;
+};
 
-class LangThread : public Thread {};
+class Thread : CHeapObj {
+public:
+    template<class T = Thread>
+    static T* current();
+
+    static void yield();
+    static void sleep(long);
+
+public:
+    Thread(Runnable*);
+    virtual ~Thread();
+
+    void join();
+    void detach();
+
+private:
+    void* nativeHandle;
+};
 
 #endif

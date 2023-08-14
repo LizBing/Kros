@@ -57,7 +57,7 @@ private:
 };
 
 #define DECLARE_VMFLAG(type, name, ...) \
-extern "C" type name 
+extern "C" type name; 
 
 #define DEFINE_VMFLAG(type, name, defaultValue, ...) \
 type name = defaultValue;
