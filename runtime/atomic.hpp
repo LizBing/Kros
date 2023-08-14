@@ -2,7 +2,6 @@
 #define RUNTIME_ATOMIC_
 
 #include "memory/allStatic.hpp"
-#include <stdatomic.h>
 
 // using the same memory orders as C11
 struct Atomic : AllStatic {
