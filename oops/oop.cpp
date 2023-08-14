@@ -1,6 +1,6 @@
 #include "oop.hpp"
 #include "memory/iterator.hpp"
-#include "type.hpp"
+#include "typeDesc.hpp"
 #include "utils/globals.h"
 
 inline char* OopDesc::actualBase() {
