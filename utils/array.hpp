@@ -12,7 +12,6 @@ class Array : CHeapObj {
 
 public:
     Array(size_t len = 128)  
-     
     : _capacity(computeCapacity(len)) {
         data = new T[len];
         assert(data, "out of memory(c heap).");
